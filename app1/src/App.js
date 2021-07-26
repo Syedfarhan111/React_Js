@@ -8,7 +8,7 @@ function App() {
       <h1 style={{textAlign:"center" }}> <b> List of Institutions </b></h1>
 
       <tr>
-      <td><Courseinfo Cname="Pdac" MobileNo="7706208868" cityNmae="pune" instituteName="3rI technology " /></td>
+      <td><Courseinfo Cname="Pdac" MobileNo="7706208868" cityNmae1="pune" instituteName="3rI technology " /></td>
       <pre>   </pre>
       <td><Courseinfo Cname="c-dac"  MobileNo="254698752" cityNmae="Mumbai" instituteName=" naresh it" /></td>
       <pre>   </pre>
