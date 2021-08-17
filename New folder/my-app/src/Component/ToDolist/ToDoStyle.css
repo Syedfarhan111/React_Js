@@ -1,0 +1,38 @@
+.home {
+    background-color: #4C4C6D !important;
+    margin: 15px;
+    padding: 15px;
+}
+
+.todolist {
+    background-color: #B8DFD8 !important;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px !important;
+
+}
+
+
+.addtodo {
+    background-color: #B8DFD8 !important;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px !important;
+
+}
+
+.todoitem {
+    background-color: #FFE194 !important;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px !important;
+}
+
+.header {
+    text-align: center;
+    background-color: white;
+    padding: 10;
+
+}
