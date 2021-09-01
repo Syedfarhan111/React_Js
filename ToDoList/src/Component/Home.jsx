@@ -1,22 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import { Row, Col, Card } from "react-bootstrap";
+import AddToDo from "./ToDolist/AddToDo";
 import { ToDoList } from "./ToDolist/ToDoList";
-import { ToDoItem } from "./ToDolist/ToDoItem";
-import { AddToDo } from "./ToDolist/AddToDo";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Headder } from "./ToDolist/Headder";
+
+import "./ToDolist/ToDoStyle.css";
 
 export const Home = () => {
+  const [todoitems, setTodoitems] = useState([
+    "Learning React",
+    "Getting Job",
+    "offer Namaz",
+  ]);
+
+  const handleAdd = (newTodo) => {
+    setTodoitems([...todoitems, newTodo]);
+  };
+
+  const handledel = (currItem) => {
+    console.log(currItem);
+    const filtered = todoitems.filter((item) => item !== currItem);
+    setTodoitems([...filtered]);
+  };
   return (
-    <Resct.Fregment>
-      <Row>
-        <Col>
-          <AddToDo />
-        </Col>
-        <Col>
-          <ToDoList />
-        </Col>
-      </Row>
-    </Resct.Fregment>
+    <React.Fragment>
+      <Card className="home">
+        <Row>
+          <Headder />
+        </Row>
+        <Row>
+          <Col>
+            <AddToDo handleAdd={handleAdd} />
+          </Col>
+          <Col>
+            <ToDoList todoitems={todoitems} handledel={handledel} />
+          </Col>
+        </Row>
+      </Card>
+    </React.Fragment>
   );
 };
-
-export default Home;
