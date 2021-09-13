@@ -3,14 +3,18 @@ import { Card, Col, Row, Form, Button } from "react-bootstrap";
 
 const AddToDo = ({ handleAdd }) => {
   const [newTodo, setNewTodo] = useState("");
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && handleAdd(newTodo));
+    e.stopPropagation();
+  });
   return (
     <Card className="addtodo">
       <Card.Title>Add To Do</Card.Title>
       <Row>
         <Col md="10">
           <Form.Control
-          placeholder="Add New List"
-            typr="text"
+            placeholder="Add New List"
+            type="text"
             onChange={(e) => setNewTodo(e.target.value)}
           ></Form.Control>
         </Col>
@@ -18,9 +22,9 @@ const AddToDo = ({ handleAdd }) => {
           <Button
             onClick={() => {
               handleAdd(newTodo);
-              setNewTodo("");
+              setNewTodo(" ");
             }}
-            dissabled={newTodo === ""}
+            disabled={newTodo === " "}
           >
             ADD
           </Button>

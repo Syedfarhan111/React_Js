@@ -1,0 +1,11 @@
+.Clock {
+    margin: 20px;
+    padding: 10px;
+    background-color: plum !important;
+    align-items: center;
+}
+
+.Clock span {
+    color: chartreuse;
+    font-size: 50px;
+}

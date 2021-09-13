@@ -1,0 +1,28 @@
+.home {
+    background-color: aqua !important;
+    margin: 15px;
+    padding: 20px;
+
+}
+
+.AddToDo {
+    background-color: lightcoral !important;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 5px;
+}
+
+.ToDoList {
+    background-color: lightyellow;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.ToDoItem {
+    background-color: darkcyan !important;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 40px;
+    box-shadow: 0 0 0, 15, black;
+}
